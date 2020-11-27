@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PricingService", "PricingSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PricingServiceTest", "PricingServiceTest\PricingServiceTest.csproj", "{201A5EAD-B701-4C44-8746-7E5144E0514D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PricingService.Api", "PricingService.Api\PricingService.Api.csproj", "{0454B0EF-37AF-469F-8A2F-88CE22260224}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{201A5EAD-B701-4C44-8746-7E5144E0514D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{201A5EAD-B701-4C44-8746-7E5144E0514D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{201A5EAD-B701-4C44-8746-7E5144E0514D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0454B0EF-37AF-469F-8A2F-88CE22260224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0454B0EF-37AF-469F-8A2F-88CE22260224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0454B0EF-37AF-469F-8A2F-88CE22260224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0454B0EF-37AF-469F-8A2F-88CE22260224}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
