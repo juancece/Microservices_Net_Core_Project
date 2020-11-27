@@ -4,6 +4,8 @@ namespace PricingService.Domain
     {
         Tariff WithCode(string code);
 
+        bool Exists(string code);
+        
         void Add(Tariff tariff);
     }
 }
