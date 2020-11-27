@@ -1,9 +1,8 @@
-using System;
+using PricingService.Domain;
 
-namespace PricingService.Init
+namespace PricingServiceTest.Domain
 {
-    using Domain;
-    internal static class DemoTariffFactory
+    internal static class TariffFactory
     {
         internal static Tariff Travel()
         {
@@ -11,7 +10,7 @@ namespace PricingService.Init
             travel.BasePremiumRules.AddBasePriceRule("C1", null, "(NUM_OF_ADULTS) * (DESTINATION == \"EUR\" ? 26.00M : 34.00M)");
             travel.BasePremiumRules.AddBasePriceRule("C2", null, "(NUM_OF_ADULTS + NUM_OF_CHILDREN) * 26.00M");
             travel.BasePremiumRules.AddBasePriceRule("C3", null, "(NUM_OF_ADULTS + NUM_OF_CHILDREN) * 10.00M");
-            
+
             travel.DiscountMarkupRules.AddPercentMarkup("DESTINATION == \"WORLD\"", 1.5M);
 
             return travel;
@@ -27,15 +26,15 @@ namespace PricingService.Init
             house.BasePremiumRules.AddBasePriceRule("C2", "TYP == \"APT\"", "AREA * 0.25M");
             house.BasePremiumRules.AddBasePriceRule("C2", "TYP == \"HOUSE\"", "AREA * 0.45M");
 
-            house.BasePremiumRules.AddBasePriceRule("C3", null, "30B");
-            house.BasePremiumRules.AddBasePriceRule("C4", null, "50B");
+            house.BasePremiumRules.AddBasePriceRule("C3", null, "30M");
+            house.BasePremiumRules.AddBasePriceRule("C4", null, "50M");
 
             house.DiscountMarkupRules.AddPercentMarkup("FLOOD == \"YES\"", 1.50M);
             house.DiscountMarkupRules.AddPercentMarkup("NUM_OF_CLAIM > 1 ", 1.25M);
 
             return house;
         }
-
+        
         internal static Tariff Farm()
         {
             Tariff farm = new Tariff("FAI");
@@ -50,7 +49,7 @@ namespace PricingService.Init
 
             return farm;
         }
-
+        
         internal static Tariff Car()
         {
             Tariff car = new Tariff("CAR");
